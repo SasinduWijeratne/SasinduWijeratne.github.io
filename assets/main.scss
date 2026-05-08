@@ -116,16 +116,23 @@
   transform: scale(1.1);
 }
 
-// Floating GoatCounter panel (see _includes/stats-corner.html)
+// GoatCounter stats panel — top-right of footer (see _includes/footer.html)
+.site-footer__inner {
+  position: relative;
+}
+
+.site-footer__stats {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
 .stats-corner {
-  position: fixed;
-  z-index: 100;
-  bottom: 1rem;
-  left: 1rem;
-  width: min(300px, calc(100vw - 2rem));
+  width: min(300px, 100%);
   max-width: 100%;
   border-radius: 10px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   background: #fff;
   border: 1px solid #e8e8e8;
   padding: 0.5rem 0.65rem 0.6rem;
@@ -190,8 +197,12 @@
 }
 
 @media (max-width: 640px) {
+  .site-footer__stats {
+    justify-content: stretch;
+  }
+
   .stats-corner {
-    display: none;
+    width: 100%;
   }
 }
 

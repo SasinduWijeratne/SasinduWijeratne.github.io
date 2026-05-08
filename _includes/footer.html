@@ -1,7 +1,13 @@
 <footer class="site-footer h-card">
   <data class="u-url" href="{{ '/' | relative_url }}"></data>
 
-  <div class="wrapper">
+  <div class="wrapper site-footer__inner">
+
+    {%- if site.goatcounter_url and site.goatcounter_corner_embed != false -%}
+    <div class="site-footer__stats">
+      {%- include stats-corner.html -%}
+    </div>
+    {%- endif -%}
 
     <div class="footer-col-wrapper footer-col-wrapper--no-contact">
       <div class="footer-col footer-col-2">
