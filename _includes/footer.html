@@ -5,19 +5,7 @@
 
     <h2 class="footer-heading">{{ site.title | escape }}</h2>
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title | escape }}
-            {%- endif -%}
-            </li>
-        </ul>
-      </div>
-
+    <div class="footer-col-wrapper footer-col-wrapper--no-contact">
       <div class="footer-col footer-col-2">
         <p class="footer-profiles-label">Profiles</p>
         {%- include social.html -%}
