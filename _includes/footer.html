@@ -3,21 +3,21 @@
 
   <div class="wrapper site-footer__inner">
 
-    {%- if site.clustrmaps_map_id and site.clustrmaps_map_id != '' -%}
-    <div class="site-footer__stats">
-      {%- include stats-corner.html -%}
-    </div>
-    {%- endif -%}
-
-    <div class="footer-col-wrapper footer-col-wrapper--no-contact">
-      <div class="footer-col footer-col-2">
+    <div class="site-footer__top">
+      <div class="site-footer__profiles">
         <p class="footer-profiles-label">Profiles</p>
         {%- include social.html -%}
       </div>
 
-      <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
+      {%- if site.clustrmaps_map_id and site.clustrmaps_map_id != '' -%}
+      <div class="site-footer__stats">
+        {%- include stats-corner.html -%}
       </div>
+      {%- endif -%}
+    </div>
+
+    <div class="site-footer__tagline">
+      <p>{{- site.description | escape -}}</p>
     </div>
 
   </div>

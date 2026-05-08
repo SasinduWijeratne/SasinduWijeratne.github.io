@@ -62,31 +62,6 @@
   }
 }
 
-.site-footer .footer-col-wrapper--no-contact {
-  margin-left: 0;
-}
-
-.site-footer .footer-col-wrapper--no-contact .footer-col {
-  float: none;
-}
-
-.site-footer .footer-col-wrapper--no-contact .footer-col-2 {
-  width: calc(32% - 0.75rem);
-  max-width: 220px;
-}
-
-.site-footer .footer-col-wrapper--no-contact .footer-col-3 {
-  width: calc(68% - 0.75rem);
-}
-
-@media screen and (max-width: 800px) {
-  .site-footer .footer-col-wrapper--no-contact .footer-col-2,
-  .site-footer .footer-col-wrapper--no-contact .footer-col-3 {
-    width: calc(100% - 0.75rem);
-    max-width: none;
-  }
-}
-
 .footer-profiles-label {
   margin: 0 0 0.5rem;
   font-size: 0.95rem;
@@ -116,21 +91,35 @@
   transform: scale(1.1);
 }
 
-// Visitor map (ClustrMaps) — top-right of footer (see _includes/footer.html)
+// Footer: Profiles (left) + visitor map (right), tagline below — see _includes/footer.html
 .site-footer__inner {
   position: relative;
 }
 
-.site-footer__stats {
+.site-footer__top {
   display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.site-footer__profiles {
+  flex: 1 1 220px;
+  min-width: 0;
+}
+
+.site-footer__stats {
+  flex: 0 1 auto;
+  width: min(300px, 100%);
+  max-width: 100%;
 }
 
 .stats-corner {
-  width: min(300px, 100%);
-  max-width: 100%;
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
   border-radius: 10px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   background: #fff;
@@ -194,13 +183,32 @@
   height: auto;
 }
 
-@media (max-width: 640px) {
+.site-footer__tagline {
+  padding-top: 1rem;
+  border-top: 1px solid #e8e8e8;
+}
+
+.site-footer__tagline p {
+  margin: 0;
+  color: #828282;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 720px) {
+  .site-footer__top {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
   .site-footer__stats {
-    justify-content: stretch;
+    width: 100%;
+    max-width: none;
   }
 
   .stats-corner {
-    width: 100%;
+    max-width: none;
+    margin-left: 0;
   }
 }
 
