@@ -1,0 +1,31 @@
+title: Sasindu Wijeratne
+description: >-
+  Senior Engineer (Architecture) at Tenstorrent. Ph.D. in Computer Engineering from USC.
+  Research in parallel computing, tensor decomposition, and hardware-software co-design.
+baseurl: ""
+url: "https://sasinduwijeratne.github.io"
+
+author:
+  name: Sasindu Wijeratne
+  email: sasinduwijeratne@gmail.com
+
+theme: minima
+minima:
+  skin: classic
+
+header_pages:
+  - publications.md
+  - experience.md
+  - teaching.md
+  - service.md
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+markdown: kramdown
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
