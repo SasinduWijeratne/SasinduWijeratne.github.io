@@ -23,9 +23,8 @@ header_pages:
   - teaching.md
   - service.md
 
-# Optional analytics (GoatCounter — free, simple): https://www.goatcounter.com
-# After signup, add your count URL (production builds only):
-# goatcounter_url: https://YOURCODE.goatcounter.com/count
+# GoatCounter (production builds only): https://www.goatcounter.com
+goatcounter_url: "https://sasindu120.goatcounter.com/count"
 
 plugins:
   - jekyll-feed
