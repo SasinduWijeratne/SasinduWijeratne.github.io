@@ -4,7 +4,7 @@
 @import "minima";
 
 .wrapper {
-  max-width: 820px;
+  max-width: 980px;
 }
 
 .site-header .site-title {
@@ -40,9 +40,10 @@
 }
 
 .home-education {
-  margin-top: 2rem;
-  padding-top: 1.25rem;
+  margin-top: 3.25rem;
+  padding-top: 1.75rem;
   border-top: 1px solid #e8e8e8;
+  clear: both;
 }
 
 .home-education h3 {
