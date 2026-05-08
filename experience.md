@@ -34,9 +34,3 @@ Research highlights (supervised by Prof. Viktor Prasanna):
 **Shared memory controller (2020-2021):** Memory controller for heterogeneous platforms handling irregular traffic from CPU, GPU, and FPGA via routing/mapping.
 
 **Prior (University of Moratuwa):** Reconfigurable co-processor with limited precision for DNNs; SDN switch on FPGA (OpenFlow); HEVC SCC extension (Intra Block Copy, Palette Coding) at ParaQum Technologies.
-
-### Education
-
-- **Ph.D., Computer Engineering** -- USC, Los Angeles, CA (Summer 2025). Thesis: *Hardware-aware Algorithm Design of Tensor Decomposition for CPU, GPU, and FPGA.* Advisor: Viktor Prasanna. CGPA: 3.92/4.00.
-- **M.S., Electrical Engineering** -- USC (Spring 2024). Focus: Parallel Computing and Computer Architecture. CGPA: 3.96/4.00.
-- **B.Sc. Eng. (Hons.), Electronic and Telecommunication Engineering** -- University of Moratuwa, Sri Lanka (Fall 2018). CGPA: 3.75/4.20.
