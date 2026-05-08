@@ -1,16 +1,13 @@
 {%- assign gc_site = site.goatcounter_url | remove: '/count' -%}
 <details class="stats-corner" open>
   <summary class="stats-corner__summary">
-    <span>Visitors by region</span>
-    <span class="stats-corner__badge">live</span>
+    <span>Visitor stats</span>
+    <span class="stats-corner__badge">GoatCounter</span>
   </summary>
-  <div class="stats-corner__frame-wrap">
-    <iframe
-      class="stats-corner__frame"
-      src="{{ gc_site }}/?hideui=1"
-      title="GoatCounter visitor statistics"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <div class="stats-corner__body">
+    <p class="stats-corner__text">
+      View visits by region and other breakdowns on GoatCounter — opens in a new tab.
+    </p>
+    <a class="stats-corner__cta" href="{{ gc_site }}/" target="_blank" rel="noopener noreferrer">Open visitor dashboard ↗</a>
   </div>
-  <a class="stats-corner__full" href="{{ gc_site }}/" target="_blank" rel="noopener noreferrer">Open full stats ↗</a>
 </details>
