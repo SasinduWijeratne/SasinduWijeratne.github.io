@@ -188,8 +188,10 @@
   margin-top: 0.25rem;
 }
 
-.stats-corner__map iframe {
+.stats-corner__map iframe,
+.stats-corner__map img {
   max-width: 100%;
+  height: auto;
 }
 
 @media (max-width: 640px) {

@@ -26,9 +26,9 @@ header_pages:
 # Stats appear in Google Analytics only (no map on the page). Loaded only in production builds.
 # google_analytics: G-XXXXXXXX
 
-# ClustrMaps visitor map in the footer — free at https://www.clustrmaps.com — register your URL, copy the `d=…`
-# value from their embed snippet into:
-clustrmaps_map_id: ""
+# ClustrMaps visitor map (footer). Map ID from embed code; dashboard link for static fallback image.
+clustrmaps_map_id: "8tXaIlj8t6P2V1AH-iPfd6u-NajhE1B7kQqEakJM6IM"
+clustrmaps_site_url: "https://clustrmaps.com/site/1c9yb"
 
 plugins:
   - jekyll-feed
