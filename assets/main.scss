@@ -46,3 +46,32 @@
     width: 240px;
   }
 }
+
+.footer-profiles-label {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #424242;
+}
+
+.site-footer .social-media-list--profiles li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.site-footer .social-media-list--profiles li a:hover,
+.site-footer .social-media-list--profiles li a:focus-visible {
+  transform: translateY(-2px);
+}
+
+.site-footer .social-media-list--profiles .svg-icon {
+  transition: transform 0.25s ease;
+}
+
+.site-footer .social-media-list--profiles li a:hover .svg-icon,
+.site-footer .social-media-list--profiles li a:focus-visible .svg-icon {
+  transform: scale(1.1);
+}

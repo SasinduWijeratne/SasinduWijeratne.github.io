@@ -1,0 +1,20 @@
+<ul class="social-media-list social-media-list--profiles">
+  <li>
+    <a rel="me" href="https://www.linkedin.com/in/{{ site.linkedin_username | cgi_escape | escape }}">
+      <svg class="svg-icon" aria-hidden="true"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg>
+      <span class="username">LinkedIn</span>
+    </a>
+  </li>
+  <li>
+    <a href="{{ site.google_scholar_url }}">
+      <svg class="svg-icon svg-icon--scholar" role="img" aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path fill="currentColor" d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+      <span class="username">Google Scholar</span>
+    </a>
+  </li>
+  <li>
+    <a href="https://github.com/{{ site.github_username | cgi_escape | escape }}">
+      <svg class="svg-icon" aria-hidden="true"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
+      <span class="username">GitHub</span>
+    </a>
+  </li>
+</ul>

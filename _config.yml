@@ -6,7 +6,11 @@ baseurl: ""
 url: "https://sasinduwijeratne.github.io"
 
 author: Sasindu Wijeratne
-email: sasinduwijeratne@gmail.com
+
+# Footer profile links (see _includes/social.html)
+github_username: SasinduWijeratne
+linkedin_username: sasindu-wijeratne-4aaa601175
+google_scholar_url: "https://scholar.google.com/citations?user=KWWUWBIAAAAJ&hl=en"
 
 theme: minima
 minima:
