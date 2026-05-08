@@ -11,3 +11,27 @@
 .page-content li {
   margin-bottom: 0.35em;
 }
+
+.home-intro::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+img.profile-pic {
+  float: right;
+  width: min(38%, 220px);
+  height: auto;
+  margin: 0 0 1rem 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 600px) {
+  img.profile-pic {
+    float: none;
+    display: block;
+    width: min(240px, 70%);
+    margin: 0 auto 1.25rem;
+  }
+}
