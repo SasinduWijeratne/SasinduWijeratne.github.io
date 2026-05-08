@@ -18,5 +18,7 @@ My research interests include parallel and distributed computing, hardware-softw
 **CV:** [PDF]({{ '/assets/Sasindu_CV.pdf' | relative_url }})
 
 **Contact:** [sasinduwijeratne@gmail.com](mailto:sasinduwijeratne@gmail.com)
+
+**Profiles:** [LinkedIn](https://www.linkedin.com/in/sasindu-wijeratne-4aaa601175/) · [Google Scholar](https://scholar.google.com/citations?user=KWWUWBIAAAAJ&hl=en) · [GitHub](https://github.com/SasinduWijeratne)
   </div>
 </div>
