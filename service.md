@@ -6,11 +6,11 @@ permalink: /service/
 
 ### Awards and honors
 
-- Best Student Paper, 2024 IEEE High Performance Extreme Computing Conference (HPEC).
-- ACM Travel Grant recipient, ISFPGA / FPGA 2023.
-- Outstanding Poster Award, USC Ming Hsieh ECE 14th Annual Research Festival, Fall 2024 (*Taming Sparse Tensor Decomposition: Unified Acceleration Framework*).
-- Best Paper Nominee: Asilomar 2024; SBAC-PAD 2023; International Radar Conference 2023.
-- Ming Hsieh ECE Ph.D. Scholar Finalist, 2023–2024.
+- <span class="badge-award badge-award--best">Best Student Paper</span> 2024 IEEE High Performance Extreme Computing Conference (HPEC).
+- <span class="badge-award badge-award--honor">Travel Grant</span> ACM Travel Grant recipient, ISFPGA / FPGA 2023.
+- <span class="badge-award badge-award--honor">Outstanding Poster</span> USC Ming Hsieh ECE 14th Annual Research Festival, Fall 2024 (*Taming Sparse Tensor Decomposition: Unified Acceleration Framework*).
+- <span class="badge-award badge-award--nominee">Best Paper Nominee</span> Asilomar 2024; SBAC-PAD 2023; International Radar Conference 2023.
+- <span class="badge-award badge-award--honor">Ph.D. Scholar Finalist</span> Ming Hsieh ECE, 2023–2024.
 - Mahapola merit scholarship for undergraduate studies, Sri Lanka.
 - All Sri Lanka Rank 81 in undergraduate university entrance (about 80,000 students).
 - All Sri Lanka Rank 16 in General Ordinary Level examination (about 400,000 students).

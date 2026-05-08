@@ -1,97 +1,322 @@
 ---
 ---
 
+// ── Color palette & Minima variable overrides (BEFORE import) ──────────
+$brand-color:       #0077b6;
+$brand-color-light: lighten($brand-color, 30%);
+$brand-color-dark:  #005f8a;
+$text-color:        #2d3436;
+$background-color:  #fdfdfd;
+$grey-color:        #6c757d;
+$grey-color-light:  #e9ecef;
+$grey-color-dark:   #343a40;
+$base-font-family:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$base-font-size:    16.5px;
+$base-line-height:  1.65;
+$spacing-unit:      28px;
+
 @import "minima";
+
+// ── Global ─────────────────────────────────────────────────────────────
+* { box-sizing: border-box; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 .wrapper {
   max-width: 980px;
 }
 
-.site-header .site-title {
-  margin-right: 1.75rem;
+h1, h2, h3, h4 {
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+  color: $grey-color-dark;
+  font-weight: 600;
 }
 
+a {
+  transition: color 0.2s ease;
+
+  &:hover { color: $brand-color-dark; }
+}
+
+// ── Animated accent bar under sections ─────────────────────────────────
+.page-content h3 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.35rem;
+  margin-bottom: 1.1rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, $brand-color, lighten($brand-color, 18%));
+    transition: width 0.35s ease;
+  }
+
+  &:hover::after { width: 100%; }
+}
+
+// ── Site header ────────────────────────────────────────────────────────
+.site-header {
+  background: linear-gradient(135deg, #1b2838 0%, #1a3a52 100%);
+  border-top: none;
+  border-bottom: none;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.10);
+}
+
+.site-title {
+  color: #fff !important;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-right: 2rem;
+
+  &:visited { color: #fff !important; }
+  &:hover {
+    color: lighten($brand-color, 30%) !important;
+    text-decoration: none;
+  }
+}
+
+.site-nav {
+  .page-link {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    position: relative;
+    padding-bottom: 2px;
+    transition: color 0.2s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      background: $brand-color-light;
+      border-radius: 1px;
+      transition: width 0.3s ease;
+    }
+
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+      &::after { width: 100%; }
+    }
+  }
+
+  .menu-icon > svg { fill: rgba(255, 255, 255, 0.9); }
+
+  @media screen and (max-width: 600px) {
+    background-color: #1b2838;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    .page-link {
+      color: rgba(255, 255, 255, 0.9);
+      &:hover { color: $brand-color-light; }
+    }
+  }
+}
+
+// ── Page content spacing ───────────────────────────────────────────────
 .post-content li,
 .page-content li {
-  margin-bottom: 0.35em;
+  margin-bottom: 0.5em;
+  line-height: 1.6;
 }
 
+.page-content p {
+  line-height: 1.7;
+}
+
+// ── Home intro ─────────────────────────────────────────────────────────
 .home-intro {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  gap: 1.5rem;
-  margin-top: 0.5rem;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0f0f0;
 }
 
 .home-intro .profile-pic {
   flex: 0 0 auto;
   display: block;
-  width: 220px;
+  width: 200px;
   max-width: 42%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px $brand-color, 0 4px 20px rgba(0, 0, 0, 0.10);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 0 5px lighten($brand-color, 10%), 0 8px 30px rgba(0, 0, 0, 0.12);
+  }
 }
 
 .home-intro .home-text {
-  flex: 1 1 280px;
+  flex: 1 1 300px;
   min-width: 0;
-}
 
-.home-education {
-  margin-top: 3.25rem;
-  padding-top: 1.75rem;
-  border-top: 1px solid #e8e8e8;
-  clear: both;
-}
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.65rem;
+    color: $grey-color-dark;
 
-.home-education h3 {
-  margin-top: 0;
+    &::after { display: none; }
+  }
+
+  p:first-of-type { margin-top: 0; }
+
+  a {
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: rgba($brand-color, 0.3);
+    text-underline-offset: 2px;
+    transition: text-decoration-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      text-decoration-color: $brand-color;
+    }
+  }
+
+  strong a {
+    text-decoration: none;
+    color: $brand-color;
+    border-bottom: 2px solid rgba($brand-color, 0.25);
+    transition: border-color 0.2s ease;
+
+    &:hover { border-color: $brand-color; }
+  }
 }
 
 @media (max-width: 600px) {
   .home-intro {
     flex-direction: column;
     align-items: center;
+    padding: 1.5rem;
   }
 
   .home-intro .profile-pic {
-    max-width: 85%;
-    width: 240px;
+    max-width: 70%;
+    width: 180px;
   }
 }
 
-.footer-profiles-label {
-  margin: 0 0 0.5rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: #424242;
+// ── Education section ──────────────────────────────────────────────────
+.home-education {
+  margin-top: 2.5rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #eef2f7 100%);
+  border-radius: 14px;
+  border: 1px solid #e3e8ef;
+  clear: both;
 }
 
-.site-footer .social-media-list--profiles li a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  transition: transform 0.2s ease, color 0.2s ease;
+.home-education h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: $grey-color-dark;
 }
 
-.site-footer .social-media-list--profiles li a:hover,
-.site-footer .social-media-list--profiles li a:focus-visible {
-  transform: translateY(-2px);
+.home-education ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
 }
 
-.site-footer .social-media-list--profiles .svg-icon {
-  transition: transform 0.25s ease;
+.home-education li {
+  position: relative;
+  padding: 0.85rem 1rem 0.85rem 1.5rem;
+  margin-bottom: 0.75rem;
+  background: #fff;
+  border-radius: 10px;
+  border-left: 4px solid $brand-color;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
+  }
+
+  &:last-child { margin-bottom: 0; }
 }
 
-.site-footer .social-media-list--profiles li a:hover .svg-icon,
-.site-footer .social-media-list--profiles li a:focus-visible .svg-icon {
-  transform: scale(1.1);
+// ── Publication list styling ───────────────────────────────────────────
+.page-content ul li strong:first-child {
+  color: $text-color;
 }
 
-// Footer: Profiles (left) + visitor map (right), tagline below — see _includes/footer.html
+// ── Award badges ───────────────────────────────────────────────────────
+.badge-award {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  margin-left: 0.25rem;
+  position: relative;
+  top: -1px;
+  line-height: 1;
+}
+
+.badge-award--best {
+  color: #fff;
+  background: linear-gradient(135deg, #e76f51, #f4a261);
+}
+
+.badge-award--nominee {
+  color: #855b1b;
+  background: #fef3cd;
+  border: 1px solid #f5d88e;
+}
+
+.badge-award--honor {
+  color: #155724;
+  background: #d4edda;
+  border: 1px solid #a3d9b1;
+}
+
+// ── Experience timeline dots ───────────────────────────────────────────
+.page-content h3 + p > strong:first-child {
+  color: $grey-color-dark;
+}
+
+// ── Footer ─────────────────────────────────────────────────────────────
+.site-footer {
+  background: #1b2838;
+  border-top: none;
+  color: rgba(255, 255, 255, 0.75);
+  padding: $spacing-unit * 1.2 0;
+
+  a {
+    color: rgba(255, 255, 255, 0.85);
+    transition: color 0.2s ease;
+    &:hover { color: #fff; }
+  }
+
+  p { color: rgba(255, 255, 255, 0.6); }
+}
+
 .site-footer__inner {
   position: relative;
 }
@@ -116,15 +341,50 @@
   max-width: 100%;
 }
 
+.footer-profiles-label {
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.95);
+  font-family: "Source Serif 4", Georgia, serif;
+}
+
+.site-footer .social-media-list--profiles {
+  li a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 0;
+    transition: transform 0.2s ease, color 0.2s ease;
+
+    &:hover, &:focus-visible {
+      transform: translateX(4px);
+      color: #fff;
+    }
+  }
+
+  .svg-icon {
+    fill: rgba(255, 255, 255, 0.7);
+    transition: fill 0.2s ease, transform 0.25s ease;
+  }
+
+  li a:hover .svg-icon,
+  li a:focus-visible .svg-icon {
+    fill: #fff;
+    transform: scale(1.15);
+  }
+}
+
+// Stats corner in footer
 .stats-corner {
   width: 100%;
   max-width: 300px;
   margin-left: auto;
   border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  background: #fff;
-  border: 1px solid #e8e8e8;
-  padding: 0.5rem 0.65rem 0.6rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.6rem 0.7rem 0.7rem;
   font-size: 0.875rem;
   line-height: 1.3;
 }
@@ -137,7 +397,7 @@
   justify-content: space-between;
   gap: 0.5rem;
   font-weight: 600;
-  color: #424242;
+  color: rgba(255, 255, 255, 0.95);
   padding: 0.15rem 0.1rem 0.5rem;
   user-select: none;
 }
@@ -151,30 +411,28 @@
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #fff;
-  background: #2a7ae2;
-  padding: 0.15rem 0.45rem;
+  color: #1b2838;
+  background: $brand-color-light;
+  padding: 0.18rem 0.5rem;
   border-radius: 4px;
 }
 
-.stats-corner__body {
-  padding-top: 0.15rem;
-}
+.stats-corner__body { padding-top: 0.15rem; }
 
 .stats-corner__text {
   margin: 0 0 0.65rem;
-  color: #555;
-  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
   line-height: 1.45;
-}
 
-.stats-corner__text a {
-  color: #2a7ae2;
+  a { color: rgba(255, 255, 255, 0.7); text-decoration: underline; }
 }
 
 .stats-corner__map {
   min-height: 140px;
   margin-top: 0.25rem;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .stats-corner__map iframe,
@@ -185,13 +443,13 @@
 
 .site-footer__tagline {
   padding-top: 1rem;
-  border-top: 1px solid #e8e8e8;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .site-footer__tagline p {
   margin: 0;
-  color: #828282;
-  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 
@@ -212,3 +470,18 @@
   }
 }
 
+// ── Subtle page entrance ───────────────────────────────────────────────
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.page-content > .wrapper {
+  animation: fadeInUp 0.5s ease both;
+}
+
+// ── Selection highlight ────────────────────────────────────────────────
+::selection {
+  background: rgba($brand-color, 0.15);
+  color: $text-color;
+}
