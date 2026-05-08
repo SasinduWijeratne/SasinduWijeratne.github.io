@@ -116,7 +116,7 @@
   transform: scale(1.1);
 }
 
-// GoatCounter stats panel — top-right of footer (see _includes/footer.html)
+// Visitor map (ClustrMaps) — top-right of footer (see _includes/footer.html)
 .site-footer__inner {
   position: relative;
 }
@@ -179,21 +179,17 @@
   line-height: 1.45;
 }
 
-.stats-corner__cta {
-  display: inline-block;
-  padding: 0.45rem 0.75rem;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 0.82rem;
-  color: #fff !important;
-  background: #2a7ae2;
-  border: 1px solid #1f5fb8;
-  text-decoration: none !important;
+.stats-corner__text a {
+  color: #2a7ae2;
 }
 
-.stats-corner__cta:hover,
-.stats-corner__cta:focus-visible {
-  background: #2269c9;
+.stats-corner__map {
+  min-height: 140px;
+  margin-top: 0.25rem;
+}
+
+.stats-corner__map iframe {
+  max-width: 100%;
 }
 
 @media (max-width: 640px) {

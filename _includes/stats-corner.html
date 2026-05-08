@@ -1,13 +1,18 @@
-{%- assign gc_site = site.goatcounter_url | remove: '/count' -%}
 <details class="stats-corner" open>
   <summary class="stats-corner__summary">
-    <span>Visitor stats</span>
-    <span class="stats-corner__badge">GoatCounter</span>
+    <span>Visitor map</span>
+    <span class="stats-corner__badge">ClustrMaps</span>
   </summary>
   <div class="stats-corner__body">
     <p class="stats-corner__text">
-      View visits by region and other breakdowns on GoatCounter — opens in a new tab.
+      Recent visits shown roughly by location (widget by <a href="https://www.clustrmaps.com/" target="_blank" rel="noopener noreferrer">ClustrMaps</a>).
     </p>
-    <a class="stats-corner__cta" href="{{ gc_site }}/" target="_blank" rel="noopener noreferrer">Open visitor dashboard ↗</a>
+    <div class="stats-corner__map">
+      <script
+        type="text/javascript"
+        id="clustrmaps"
+        src="https://cdn.clustrmaps.com/map_v2.js?cl=ffffff&amp;w=a&amp;t=n&amp;d={{ site.clustrmaps_map_id }}"
+        async></script>
+    </div>
   </div>
 </details>

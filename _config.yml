@@ -22,10 +22,13 @@ header_pages:
   - teaching.md
   - service.md
 
-# GoatCounter (production builds only): https://www.goatcounter.com
-goatcounter_url: "https://sasindu120.goatcounter.com/count"
-# Floating dashboard embed (bottom-left). Set false to hide.
-goatcounter_corner_embed: true
+# Google Analytics 4 — add Measurement ID (e.g. G-XXXXXXXX) after creating a GA4 Data Stream for your site.
+# Stats appear in Google Analytics only (no map on the page). Loaded only in production builds.
+# google_analytics: G-XXXXXXXX
+
+# ClustrMaps visitor map in the footer — free at https://www.clustrmaps.com — register your URL, copy the `d=…`
+# value from their embed snippet into:
+clustrmaps_map_id: ""
 
 plugins:
   - jekyll-feed
