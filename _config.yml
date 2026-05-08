@@ -14,6 +14,7 @@ minima:
   skin: classic
 
 header_pages:
+  - news.md
   - publications.md
   - experience.md
   - teaching.md
