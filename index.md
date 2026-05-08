@@ -17,7 +17,7 @@ I completed my Ph.D. in Computer Engineering from the [University of Southern Ca
 
 My research interests include parallel and distributed computing, hardware–software co-design, computer architecture, and performance modeling.
 
-When I'm not optimizing workloads, I'm optimizing weekends—recent bests in the gym are a 475 lb deadlift, 375 lb squat, and 230 lb bench (1,080 lb combined in the big three; spreadsheets welcome). I also hike, jog, boulder, and play badminton and pickleball.
+When I'm not optimizing workloads, I like to hit the gym (475 lb deadlift, 375 lb squat, and 230 lb bench), hike, jog, boulder, and play badminton and pickleball.
 
 **CV:** [PDF]({{ '/assets/Sasindu_CV.pdf' | relative_url }})
   </div>
