@@ -5,9 +5,9 @@ description: >-
 baseurl: ""
 url: "https://sasinduwijeratne.github.io"
 
-author:
-  name: Sasindu Wijeratne
-  email: sasinduwijeratne@gmail.com
+# Minima footer expects a string author plus top-level email (not author.name / author.email).
+author: Sasindu Wijeratne
+email: sasinduwijeratne@gmail.com
 
 theme: minima
 minima:
