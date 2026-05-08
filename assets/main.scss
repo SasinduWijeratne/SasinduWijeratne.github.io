@@ -115,3 +115,76 @@
 .site-footer .social-media-list--profiles li a:focus-visible .svg-icon {
   transform: scale(1.1);
 }
+
+// Floating GoatCounter panel (see _includes/stats-corner.html)
+.stats-corner {
+  position: fixed;
+  z-index: 100;
+  bottom: 1rem;
+  left: 1rem;
+  width: min(380px, calc(100vw - 2rem));
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  padding: 0.5rem 0.65rem 0.6rem;
+  font-size: 0.875rem;
+  line-height: 1.3;
+}
+
+.stats-corner__summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #424242;
+  padding: 0.15rem 0.1rem 0.5rem;
+  user-select: none;
+}
+
+.stats-corner__summary::-webkit-details-marker {
+  display: none;
+}
+
+.stats-corner__badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #2a7ae2;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+}
+
+.stats-corner__frame-wrap {
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  background: #fafafa;
+}
+
+.stats-corner__frame {
+  display: block;
+  width: 100%;
+  height: 220px;
+  border: 0;
+}
+
+.stats-corner__full {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .stats-corner {
+    display: none;
+  }
+}
+

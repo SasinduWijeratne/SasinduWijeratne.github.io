@@ -25,6 +25,8 @@ header_pages:
 
 # GoatCounter (production builds only): https://www.goatcounter.com
 goatcounter_url: "https://sasindu120.goatcounter.com/count"
+# Floating dashboard embed (bottom-left). Set false to hide.
+goatcounter_corner_embed: true
 
 plugins:
   - jekyll-feed
